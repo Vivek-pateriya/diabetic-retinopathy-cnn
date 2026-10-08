@@ -1,0 +1,48 @@
+{
+  "validation_accuracy": 0.6712141882673943,
+  "validation_images": 733,
+  "classes": [
+    "No DR",
+    "Mild",
+    "Moderate",
+    "Severe",
+    "Proliferative DR"
+  ],
+  "confusion_matrix": [
+    [
+      349,
+      3,
+      3,
+      6,
+      0
+    ],
+    [
+      4,
+      44,
+      14,
+      3,
+      9
+    ],
+    [
+      17,
+      36,
+      76,
+      30,
+      41
+    ],
+    [
+      3,
+      11,
+      10,
+      11,
+      4
+    ],
+    [
+      3,
+      19,
+      15,
+      10,
+      12
+    ]
+  ]
+}
