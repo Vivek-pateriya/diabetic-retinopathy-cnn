@@ -51,7 +51,7 @@ Pillow retain their respective licenses.
 
 ## Verification status
 
-Files were created locally, but Codex's terminal connection is unavailable.
+Files were created locally, but terminal connection is unavailable.
 Runtime and training verification must run in the working PowerShell window.
 ## Web interface
 
