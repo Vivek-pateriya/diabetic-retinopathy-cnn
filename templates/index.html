@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RetinaCheck by Vivek Pateriya</title>
+  <script>
+    try { if (localStorage.getItem('retinacheck-theme') === 'dark') document.documentElement.dataset.theme = 'dark'; } catch (_) {}
+  </script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script src="{{ url_for('static', filename='app.js') }}" defer></script>
+</head>
+<body>
+  <header class="header">
+    <a class="brand" href="{{ url_for('show_project_paper') }}" aria-label="Read about RetinaCheck and Vivek Pateriya">◉ <span>RetinaCheck<small>by Vivek Pateriya</small></span></a>
+    <button id="theme-toggle" class="theme-button" type="button" aria-pressed="false">Dark mode</button>
+  </header>
+  <main>
+    <section class="hero"><p class="eyebrow">RETINAL IMAGE ANALYSIS</p><h1>A clearer view of<br>your retinal images.</h1><p>Upload a fundus photograph and explore the model’s five diabetic-retinopathy grades.</p></section>
+    <section class="workspace">
+      <form id="upload-form" class="panel">
+        <h2>01. Upload your image</h2>
+        <label class="upload-area"> <span class="upload-symbol">↑</span><strong>Choose a retinal image</strong><span>PNG or JPEG, up to 10 MB</span><input id="image-input" name="image" type="file" accept="image/png,image/jpeg" required></label>
+        <p id="filename" class="muted">No image selected</p>
+        <button id="analyse" class="primary" type="submit">Analyse image</button>
+        <p id="status" role="status" aria-live="polite"></p>
+      </form>
+      <section class="panel"><h2>02. Analysis result</h2><div class="result-content"><img id="preview" alt="Selected retinal image" hidden><div id="empty-result" class="empty">Your preview and results will appear here.</div><div id="result" hidden><p class="eyebrow">PREDICTED GRADE</p><h3 id="grade"></h3><p class="muted">Model probabilities</p><div id="scores"></div></div></div></section>
+    </section>
+    <p class="notice">Educational prototype. Model probabilities are not a medical diagnosis.</p>
+  </main>
+  <footer>© 2026 Vivek Pateriya <span>RetinaCheck</span></footer>
+</body>
+</html>
