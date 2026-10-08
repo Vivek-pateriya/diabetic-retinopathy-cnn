@@ -62,6 +62,11 @@ Dataset: [Kaggle Diabetic Retinopathy 224x224 2019 data](https://www.kaggle.com/
 Dataset ownership and terms belong to its provider. TensorFlow, NumPy, and
 Pillow retain their respective licenses.
 
+## Verification status
+
+The bundled model was checked locally: the homepage returned HTTP 200 and
+an image upload returned HTTP 200 with a grade and five probabilities.
+
 ## Web interface
 
 The white-and-teal interface includes a dark-mode switch. The browser remembers
