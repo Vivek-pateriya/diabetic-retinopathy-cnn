@@ -24,6 +24,21 @@ project directory. Dependencies require an internet connection on first setup.
 
 ## Optional: train and evaluate your own model
 
+This section assumes you completed the setup above and are inside the project
+directory. If you cloned the repository but have not set it up yet, run these
+commands from the directory containing `diabetic-retinopathy-cnn`:
+
+```powershell
+cd diabetic-retinopathy-cnn
+py -3.11 -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+```
+
+Setup is required only once. If `.venv` and dependencies are already ready,
+do not recreate the environment; continue with training below. If the web app
+is running in this terminal, stop it with Ctrl+C first or use another terminal
+opened in the project directory.
+
 Download the dataset linked below and adjust the label/image paths as needed.
 Training replaces the bundled model and metrics; back them up first.
 
