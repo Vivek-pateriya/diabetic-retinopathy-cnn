@@ -132,8 +132,8 @@ def learn_retina_grades(options):
 
 
 def classify_retina(model_path, image_path):
-    network = tf.keras.models.load_model(model_path, compile=False)
-    scores = network(decode_retina(image_path)[None, ...], training=False).numpy()[0]
+    network = tf.keras.models.load_model(str(model_path), compile=False)
+    scores = network(decode_retina(str(image_path))[None, ...], training=False).numpy()[0]
     grade = int(np.argmax(scores))
     return {'grade': grade, 'label': GRADES[grade],
             'probabilities': {label: float(score) for label, score in zip(GRADES, scores)}}

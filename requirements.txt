@@ -1,4 +1,9 @@
-tensorflow==2.16.1
-numpy<2
+# Stable TensorFlow for Python 3.10-3.13.
+tensorflow==2.21.0; python_version < "3.14"
+# Python 3.14 wheels currently require this pre-release (October 2026).
+tensorflow==2.22.0rc0; python_version == "3.14"
+# Pin the Keras nightly required by the release candidate to the tested build.
+keras-nightly==3.16.0.dev2026102204; python_version == "3.14"
+numpy>=1.26,<3
 Pillow
 Flask>=3.0,<4
